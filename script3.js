@@ -3,8 +3,8 @@ async function sendMessage() {
   document.getElementById("chat").innerHTML += `<p><b>You:</b> ${input}</p>`;
   document.getElementById("userInput").value = "";
 
-  // 👇 This is where you put the fetch
-  const response = await fetch("https://chilly-doors-relate.loca.lt/api/generate", {
+  // 👇 Fetch from your LocalTunnel URL
+  const response = await fetch("https://wicked-dancers-glow.loca.lt/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
