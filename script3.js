@@ -3,12 +3,12 @@ async function sendMessage() {
   document.getElementById("chat").innerHTML += `<p><b>You:</b> ${input}</p>`;
   document.getElementById("userInput").value = "";
 
-  // 👇 Fetch from your LocalTunnel URL
-  const response = await fetch("https://wicked-dancers-glow.loca.lt/api/generate", {
+  // 👇 Using your latest LocalTunnel URL
+  const response = await fetch("https://stale-toys-eat.loca.lt/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "llama2",   // or whichever model you want
+      model: "llama2",   // change model name if needed
       prompt: input
     })
   });
